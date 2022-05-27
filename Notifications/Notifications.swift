@@ -13,7 +13,7 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
     let notificationCenter = UNUserNotificationCenter.current()
     
     func requestAuthorisation() {
-        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge, .providesAppNotificationSettings]) { granted, error in
             print("permission granted: \(granted)")
             
             guard granted else { return }
@@ -39,11 +39,13 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
         let userAction = "User Action"
         
         content.title = notificationType
-        content.body = "This is example how to create " + notificationType
+        content.body = "COde time"
         content.sound = .default
         content.badge = 1
         content.categoryIdentifier = userAction
         
+        content.threadIdentifier = notificationType
+        /*
         guard let path = Bundle.main.path(forResource: "swift", ofType: "jpg") else {
             return
         }
@@ -56,16 +58,16 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
         } catch {
             print("The attachment could not be loaded")
         }
+        */
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        
-        let identifier = "Local Notification"
+        let identifier = UUID().uuidString
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
         notificationCenter.add(request) { (error) in
             print("Error '\(String(describing: error?.localizedDescription))")
         }
-        
+        /*
         let snoozeAction = UNNotificationAction(identifier: "Snooze", title: "Snooze", options: [])
         let deleteAction = UNNotificationAction(identifier: "Delete", title: "Delete", options: [.destructive])
         let category = UNNotificationCategory(identifier: userAction,
@@ -74,6 +76,7 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
                                               options: [])
         
         notificationCenter.setNotificationCategories([category])
+        */
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
@@ -99,5 +102,11 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
             print("Unknown action")
         }
         completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, openSettingsFor notification: UNNotification?) {
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        
+        appDelegate?.openSettings()
     }
 }

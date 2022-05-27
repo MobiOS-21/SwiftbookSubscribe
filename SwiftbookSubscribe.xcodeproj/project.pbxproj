@@ -67,6 +67,13 @@
 		3ACFBE0D2840B0F9009590C8 /* swift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3ACFBE0C2840B0F8009590C8 /* swift.jpg */; };
 		3ACFBE162840DF5A009590C8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBE152840DF5A009590C8 /* NotificationService.swift */; };
 		3ACFBE1A2840DF5A009590C8 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3ACFBE132840DF5A009590C8 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3ACFBE2B2840EF38009590C8 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACFBE2A2840EF38009590C8 /* UserNotifications.framework */; };
+		3ACFBE2D2840EF38009590C8 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACFBE2C2840EF38009590C8 /* UserNotificationsUI.framework */; };
+		3ACFBE302840EF38009590C8 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFBE2F2840EF38009590C8 /* NotificationViewController.swift */; };
+		3ACFBE332840EF38009590C8 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACFBE312840EF38009590C8 /* MainInterface.storyboard */; };
+		3ACFBE372840EF38009590C8 /* NotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3ACFBE282840EF38009590C8 /* NotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3ACFBE3B2840F201009590C8 /* swift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3ACFBE0C2840B0F8009590C8 /* swift.jpg */; };
+		3ACFBE3D2840F705009590C8 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACFBE3C2840F705009590C8 /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +83,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3ACFBE122840DF5A009590C8;
 			remoteInfo = NotificationService;
+		};
+		3ACFBE352840EF38009590C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A36966427ECBC2B006A2E74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3ACFBE272840EF38009590C8;
+			remoteInfo = NotificationContent;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -87,6 +101,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				3ACFBE1A2840DF5A009590C8 /* NotificationService.appex in Embed App Extensions */,
+				3ACFBE372840EF38009590C8 /* NotificationContent.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +183,13 @@
 		3ACFBE132840DF5A009590C8 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACFBE152840DF5A009590C8 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		3ACFBE172840DF5A009590C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ACFBE282840EF38009590C8 /* NotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ACFBE2A2840EF38009590C8 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		3ACFBE2C2840EF38009590C8 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		3ACFBE2F2840EF38009590C8 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		3ACFBE322840EF38009590C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		3ACFBE342840EF38009590C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ACFBE3C2840F705009590C8 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +242,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3ACFBE252840EF38009590C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ACFBE2D2840EF38009590C8 /* UserNotificationsUI.framework in Frameworks */,
+				3ACFBE2B2840EF38009590C8 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -233,6 +264,8 @@
 				3A55BA2D27F0B88B00630322 /* MVVM-3 */,
 				3ACFBDF32840A74C009590C8 /* Notifications */,
 				3ACFBE142840DF5A009590C8 /* NotificationService */,
+				3ACFBE2E2840EF38009590C8 /* NotificationContent */,
+				3ACFBE292840EF38009590C8 /* Frameworks */,
 				3A36966D27ECBC2B006A2E74 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -247,6 +280,7 @@
 				3A55BA2C27F0B88B00630322 /* MVVM-3.app */,
 				3ACFBDF22840A74C009590C8 /* Notifications.app */,
 				3ACFBE132840DF5A009590C8 /* NotificationService.appex */,
+				3ACFBE282840EF38009590C8 /* NotificationContent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -474,6 +508,7 @@
 			children = (
 				3ACFBE0E2840BE15009590C8 /* Notifications.entitlements */,
 				3ACFBE082840A798009590C8 /* Main.storyboard */,
+				3ACFBE3C2840F705009590C8 /* Settings.storyboard */,
 				3ACFBE0C2840B0F8009590C8 /* swift.jpg */,
 				3ACFBE062840A778009590C8 /* TableViewController.swift */,
 				3ACFBDF42840A74C009590C8 /* AppDelegate.swift */,
@@ -493,6 +528,25 @@
 				3ACFBE172840DF5A009590C8 /* Info.plist */,
 			);
 			path = NotificationService;
+			sourceTree = "<group>";
+		};
+		3ACFBE292840EF38009590C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3ACFBE2A2840EF38009590C8 /* UserNotifications.framework */,
+				3ACFBE2C2840EF38009590C8 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3ACFBE2E2840EF38009590C8 /* NotificationContent */ = {
+			isa = PBXGroup;
+			children = (
+				3ACFBE2F2840EF38009590C8 /* NotificationViewController.swift */,
+				3ACFBE312840EF38009590C8 /* MainInterface.storyboard */,
+				3ACFBE342840EF38009590C8 /* Info.plist */,
+			);
+			path = NotificationContent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -596,6 +650,7 @@
 			);
 			dependencies = (
 				3ACFBE192840DF5A009590C8 /* PBXTargetDependency */,
+				3ACFBE362840EF38009590C8 /* PBXTargetDependency */,
 			);
 			name = Notifications;
 			productName = Notifications;
@@ -617,6 +672,23 @@
 			name = NotificationService;
 			productName = NotificationService;
 			productReference = 3ACFBE132840DF5A009590C8 /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		3ACFBE272840EF38009590C8 /* NotificationContent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3ACFBE3A2840EF38009590C8 /* Build configuration list for PBXNativeTarget "NotificationContent" */;
+			buildPhases = (
+				3ACFBE242840EF38009590C8 /* Sources */,
+				3ACFBE252840EF38009590C8 /* Frameworks */,
+				3ACFBE262840EF38009590C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationContent;
+			productName = NotificationContent;
+			productReference = 3ACFBE282840EF38009590C8 /* NotificationContent.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -650,6 +722,9 @@
 					3ACFBE122840DF5A009590C8 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
+					3ACFBE272840EF38009590C8 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 3A36966727ECBC2B006A2E74 /* Build configuration list for PBXProject "SwiftbookSubscribe" */;
@@ -672,6 +747,7 @@
 				3A55BA2B27F0B88B00630322 /* MVVM-3 */,
 				3ACFBDF12840A74C009590C8 /* Notifications */,
 				3ACFBE122840DF5A009590C8 /* NotificationService */,
+				3ACFBE272840EF38009590C8 /* NotificationContent */,
 			);
 		};
 /* End PBXProject section */
@@ -735,6 +811,7 @@
 				3ACFBE0D2840B0F9009590C8 /* swift.jpg in Resources */,
 				3ACFBDFE2840A74E009590C8 /* Assets.xcassets in Resources */,
 				3ACFBE092840A798009590C8 /* Main.storyboard in Resources */,
+				3ACFBE3D2840F705009590C8 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +819,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ACFBE262840EF38009590C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ACFBE332840EF38009590C8 /* MainInterface.storyboard in Resources */,
+				3ACFBE3B2840F201009590C8 /* swift.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -837,6 +923,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3ACFBE242840EF38009590C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ACFBE302840EF38009590C8 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -844,6 +938,11 @@
 			isa = PBXTargetDependency;
 			target = 3ACFBE122840DF5A009590C8 /* NotificationService */;
 			targetProxy = 3ACFBE182840DF5A009590C8 /* PBXContainerItemProxy */;
+		};
+		3ACFBE362840EF38009590C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3ACFBE272840EF38009590C8 /* NotificationContent */;
+			targetProxy = 3ACFBE352840EF38009590C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -934,6 +1033,14 @@
 				3ACFBE002840A74E009590C8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3ACFBE312840EF38009590C8 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3ACFBE322840EF38009590C8 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1449,6 +1556,58 @@
 			};
 			name = Release;
 		};
+		3ACFBE382840EF38009590C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C9S26XRAC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationContent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationContent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobios.Notifications.NotificationContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3ACFBE392840EF38009590C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2C9S26XRAC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationContent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationContent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobios.Notifications.NotificationContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1520,6 +1679,15 @@
 			buildConfigurations = (
 				3ACFBE1C2840DF5A009590C8 /* Debug */,
 				3ACFBE1D2840DF5A009590C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3ACFBE3A2840EF38009590C8 /* Build configuration list for PBXNativeTarget "NotificationContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ACFBE382840EF38009590C8 /* Debug */,
+				3ACFBE392840EF38009590C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

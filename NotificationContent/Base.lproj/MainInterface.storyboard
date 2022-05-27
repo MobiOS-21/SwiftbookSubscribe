@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="NotificationContent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Uvx-hE-TX0">
+                                <rect key="frame" x="0.0" y="44" width="320" height="206"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuh-83-kA7">
+                                <rect key="frame" x="0.0" y="44" width="320" height="206"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="openAppButton:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="FNI-dY-4UA"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0T-wH-qKl">
+                                <rect key="frame" x="0.0" y="250" width="320" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
+                                        <rect key="frame" x="0.0" y="0.0" width="224" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoK-rl-FNH">
+                                        <rect key="frame" x="240" y="0.0" width="80" height="50"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="❤️"/>
+                                        <connections>
+                                            <action selector="likeButtonTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="PDE-gy-DX0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GcN-lo-r42" secondAttribute="bottom" id="A8U-K7-gaR"/>
+                                    <constraint firstItem="WoK-rl-FNH" firstAttribute="top" secondItem="v0T-wH-qKl" secondAttribute="top" id="Pbg-Ok-91E"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZZb-Ap-CVr"/>
+                                    <constraint firstItem="GcN-lo-r42" firstAttribute="width" secondItem="v0T-wH-qKl" secondAttribute="width" multiplier="0.7" id="a9B-wM-9FN"/>
+                                    <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="v0T-wH-qKl" secondAttribute="top" id="dzs-Fe-sqT"/>
+                                    <constraint firstAttribute="trailing" secondItem="WoK-rl-FNH" secondAttribute="trailing" id="knB-lE-Iso"/>
+                                    <constraint firstAttribute="bottom" secondItem="WoK-rl-FNH" secondAttribute="bottom" id="kxo-b8-RrV"/>
+                                    <constraint firstItem="GcN-lo-r42" firstAttribute="trailing" secondItem="WoK-rl-FNH" secondAttribute="leading" constant="-16" id="pHs-ca-wU3"/>
+                                    <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="v0T-wH-qKl" secondAttribute="leading" id="spl-ap-GWg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
+                        <color key="backgroundColor" red="0.45882353186607361" green="0.74901962280273438" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uvx-hE-TX0" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="48V-fm-4qd"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="Uvx-hE-TX0" secondAttribute="trailing" id="4mT-5v-QwA"/>
+                            <constraint firstItem="Iuh-83-kA7" firstAttribute="height" secondItem="Uvx-hE-TX0" secondAttribute="height" id="S1m-B9-z1w"/>
+                            <constraint firstItem="v0T-wH-qKl" firstAttribute="top" secondItem="Uvx-hE-TX0" secondAttribute="bottom" id="T3r-V5-45a"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="v0T-wH-qKl" secondAttribute="bottom" id="U5j-C1-ae9"/>
+                            <constraint firstItem="v0T-wH-qKl" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" id="U8c-Qw-KoC"/>
+                            <constraint firstItem="Iuh-83-kA7" firstAttribute="centerX" secondItem="Uvx-hE-TX0" secondAttribute="centerX" id="UfM-qB-vES"/>
+                            <constraint firstItem="Iuh-83-kA7" firstAttribute="width" secondItem="Uvx-hE-TX0" secondAttribute="width" id="eEI-Ns-5gb"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="v0T-wH-qKl" secondAttribute="trailing" id="kGz-Xv-Okh"/>
+                            <constraint firstItem="Iuh-83-kA7" firstAttribute="centerY" secondItem="Uvx-hE-TX0" secondAttribute="centerY" id="lph-tx-uJw"/>
+                            <constraint firstItem="Uvx-hE-TX0" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" id="mOQ-Gi-uiP"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="300"/>
+                    <connections>
+                        <outlet property="label" destination="GcN-lo-r42" id="lpW-cU-7IG"/>
+                        <outlet property="likeButton" destination="WoK-rl-FNH" id="5B3-bb-akZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="54.910714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="swift.jpg" width="800" height="400"/>
+    </resources>
+</document>
